@@ -1,0 +1,62 @@
+
+Основные команды
+git init
+Позволяет проинициализировать репозиторий в текущей папке
+git status
+Показывает текущий статус
+git add
+Отслеживает изменения файлов
+git add index.html — добавляет index.html
+git add . — добавляет все файлы
+git commit
+Сохраняет изменения в коммит
+git commit -m 'commit message' — создает коммит с сообщением
+git branch
+Работа с ветками в репозитории
+git branch — показывает список веток
+git branch branch-name — создает новую ветку branch-name
+git branch -D branch-name — удаляет ветку branch-name
+git checkout
+Переключается на другую ветку
+git checkout branch-name — переключается на последний коммит в ветке
+branch-name
+git checkout -b branch-name — создает и переключается на ветку branch-name
+git merge
+Совмещает текущую ветку с выбранной
+git merge branch-name — совмещает текущую ветку с branch-name
+git config
+Конфигурация и параметры git
+git config --global user.name — Показывает имя пользователя
+git config --global user.name 'new user' — Изменяет имя пользователя
+git config --global user.email — Показывает email пользователя
+git config --global user.email 'test@mail.ru' — Изменяет email пользователя
+git push
+Заливает текущие локальные коммиты в удаленный репозиторий
+git pull
+Забирает изменения с удаленного репозитория в локальный
+git clone
+Клонирует проект с удаленного репозитория
+
+
+
+
+1. Копируете себе локально репозиторий.
+git clone url [folder]
+cd [folder]
+2. Создаете ветку [branch_name]
+git checkout -b [branch_name]
+3. Делайте изменения
+4. Делаете один коммит или несколько.
+git add . (если создавали новые файлы)
+git commit -am "Added beautiful fixes"
+5. Создаете удаленную ветку.
+git push --set-upstream origin [branch_name]
+В дальнейшем когда удаленная ветка создана то просто
+git push
+6. Создаете в интерфейсе github pull-request. Из вашей ветки в master.
+8536993405.png
+7. автор или вы сами вливаете(merge)/отклоняете(decline) pull-request.
+На этом этапе можно добавить комментарии или замечания к коду, что-то исправить.
+8.Когда пул-реквест влили, вы локально переключаетесь в master и забираете все изменения
+git checkout master
+git pull
